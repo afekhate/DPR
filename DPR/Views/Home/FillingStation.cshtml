@@ -1,0 +1,198 @@
+﻿@{
+    ViewData["Title"] = "Car Owners";
+    //Layout = "~/Views/Shared/_FormLayout.cshtml";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@model DPR.Models.ViewModel.FillingStationOwnerViewModel
+
+
+
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-9">
+                <p>Fill out the form below to reach out to us will get back to you as soon as possible!</p>
+                <div class="my-5">
+
+                    <form  asp-controller="Home" asp-action="FillingStationDetails" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="BusinessName" asp-for="BusinessName" type="text" placeholder="Enter your Business Name..." data-sb-validations="required" />
+                                    <label for="BusinessName">Business Name</label>
+                                    <div class="invalid-feedback" data-sb-feedback="BusinessName:required">Business Name is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Certificate" asp-for="Certificates" type="file" placeholder="Enter ..." data-sb-validations="required" />
+                                    <label for="Certificate">Business Certificate</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Certificates:required">Business Certificate is required.</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Location" asp-for="Location" type="text" placeholder="Enter Business Location Number..." data-sb-validations="required" />
+                                    <label for="Location">Business Location</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Location:required">Business Location is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Depot" asp-for="Depot" type="text" placeholder="Enter Depot Name ..." data-sb-validations="required" />
+                                    <label for="Depot">Depot Where Product Was Bought</label>
+                                    @* <div class="invalid-feedback" data-sb-feedback="ChasisNo:required">Car chasis number is required.</div>*@
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Carrier" asp-for="Carrier" type="text" placeholder="Enter Product Carrier ..." data-sb-validations="required" />
+                                    <label for="Carrier">Product Carrier</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Carrier:required">Product Carrier is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Merchant" asp-for="Merchant" type="text" placeholder="Enter Product Merchant..." data-sb-validations="required" />
+                                    <label for="Merchant">Merchant you bought from</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Merchant:required">Merchant is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Manifest" asp-for="Manifests" type="file" placeholder="Upload your Manifest..." data-sb-validations="required" />
+                                    <label for="Manifest">Manifest</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Manifests:required">Manifest is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="DeliveryTime" asp-for="DeliveryTime" type="date" placeholder="Enter DeliveryTime..." data-sb-validations="required" />
+                                    <label for="DeliveryTime">DeliveryTime</label>
+                                    <div class="invalid-feedback" data-sb-feedback="DeliveryTime:required">DeliveryTime is required.</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="LLB" asp-for="LLB" type="number" min="100" placeholder="Upload Receipt of last product bought ..." data-sb-validations="required" />
+                                    <label for="LLB">Last Litre Bought</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Receipt:required">Last Litre Bought is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="DPRCode" asp-for="DPRCode" type="text" placeholder="Enter DPRCode..." data-sb-validations="required" />
+                                    <label for="DPRCode">DPRCode</label>
+                                    <div class="invalid-feedback" data-sb-feedback="DPRCode:required">DPRCode is required.</div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <br />
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <!-- Submit Button-->
+                        
+                        <button id="pushdetails" style="display:none" type="submit"></button>
+                        <button class="btn btn-primary btn-block text-uppercase " id="submitButton2" style="width: 100%; background-color: green; border-radius:20px">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+
+    $("#submitButton2").click(function () {
+        var businessname = $("#BusinessName").val();
+        var location = $("#Location").val();
+        var certificate = $("#Certificate").val();
+        var carrier = $("#Carrier").val();
+        var depot = $("#Depot").val();
+        var merchant = $("#Merchant").val();
+        var manifest = $("#Manifest").val();
+        var llb = $("#LLB").val();
+        var deliverytime = $("#DeliveryTime").val();
+        var dprcode = $("#DPRCode").val();
+
+        if (businessname == '' || businessname == null || businessname == "") {
+            toastr.error("BusinessName is required","Error");
+            return false;
+        }
+        if (location == '' || location == null || location == "") {
+            toastr.error("business location is required", "Error");
+            return false;
+        }
+        if (certificate == '' || certificate == null || certificate == "") {
+            toastr.error("certificate is required", "Error");
+            return false;
+        }
+        if (carrier == '' || carrier == null || carrier == "") {
+            toastr.error("carrier is required", "Error");
+            return false;
+        }
+        if (depot == '' || depot == null || depot == "") {
+            toastr.error("depot is required", "Error");
+            return false;
+        }
+        if (merchant == '' || merchant == null || merchant == "") {
+            toastr.error("merchant is required", "Error");
+            return false;
+        }
+        if (manifest == '' || manifest == null || manifest == "") {
+            toastr.error("manifest is required", "Error");
+            return false;
+        }
+        if (dprcode == '' || dprcode == null || dprcode == "") {
+            toastr.error("dprcode is required", "Error");
+            return false;
+        }
+        if (llb == '' || llb == null || llb == "") {
+            toastr.error("last litre bought is required", "Error");
+            return false;
+        }
+        if (deliverytime == '' || deliverytime == null || deliverytime == "") {
+            toastr.error("deliverytime is required", "Error");
+            return false;
+        }
+
+        document.getElementById("pushdetails").click();
+        window.location.href = "Home/index";
+        toastr.success("You have successfully submitted your informatioin", "Successful");
+       
+
+
+    });
+
+
+</script>

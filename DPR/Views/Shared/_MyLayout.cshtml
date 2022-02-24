@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "Welcome To NIGDPR";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Department of Petrolum Resources</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/Form/css/styles.css" rel="stylesheet" />
+    <!-- =======================================================
+    * Template Name: BizPage - v5.8.0
+    * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    @* Toast r *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    
+    
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container-fluid">
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-xl-11 d-flex align-items-center justify-content-between">
+                    <h3 class="logo"><a href="@Url.Action("Index","Home")">NIGDPR</a></h3>
+                    <!--Uncomment below if you prefer to use an image logo-->
+                    <!-- <a href="index.html" class="logo"><img src="assets/img/hero-carousel/1.jpg" alt="" class="img-fluid"></a>-->
+
+                    <nav id="navbar" class="navbar">
+                        @*<ul>
+                            <li><a class="nav-link scrollto active" href="@Url.Action("Index","Home")">Home</a></li>
+                            <li><a class="nav-link scrollto" href="@Url.Action("Index","Home")"></a></li>
+                            <li><a class="nav-link scrollto" href="@Url.Action("Index","Home")">Our Value</a></li>
+
+
+                            <li><a class="nav-link scrollto" href="@Url.Action("Index","Home")">Contact</a></li>
+                        </ul>*@
+                        <i class="bi bi-list mobile-nav-toggle"></i>
+                    </nav><!-- .navbar -->
+                </div>
+            </div>
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= hero Section ======= -->
+    <section id="hero" style="height:200px">
+        <div class="hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+                <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/7.jpg)">
+                        <div class="carousel-container">
+                            <div class="container">
+                                <h2 class="animate__animated animate__fadeInDown">We are professional</h2>
+                                <p class="animate__animated animate__fadeInUp">We are willing to make necessary correction. Thanks for understanding.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section><!-- End Hero Section -->
+
+    @RenderBody()
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>NIGDPR</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
+                -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+    <!-- Vendor JS Files -->
+    <script src="~/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="~/assets/vendor/aos/aos.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/Form/js/scripts.js"></script>
+    <script src="~/Form/js/formvalidation.js"></script>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    
+
+
+</body>
+
+</html>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

@@ -1,0 +1,200 @@
+﻿@{
+    ViewData["Title"] = "Car Owners";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@model DPR.Models.ViewModel.CarOwnerViewModel
+
+
+
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-9">
+                <p>Fill out the form below to reach out to us will get back to you as soon as possible! </br>
+                    <i class="text-danger align-content-center">kindly note that all fields are compulsory</i></p>
+                
+                <div class="my-5">
+                   
+                    <form asp-controller="Home" asp-action="CarDetails" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Model" asp-for="Model" type="text" placeholder="Enter your car model..." data-sb-validations="required" />
+                                    <label for="Model">Model</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Model:required">Car Model is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Year" asp-for="Year" type="text" placeholder="Enter car year..." data-sb-validations="required" />
+                                    <label for="Year">Year</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Year:required">year of car is required.</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="EngineNo" asp-for="EngineNo" type="text" placeholder="Enter your Engine Number..." data-sb-validations="required" />
+                                    <label for="EngineNo">EngineNo</label>
+                                    <div class="invalid-feedback" data-sb-feedback="EngineNo:required">Car engine number is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="ChasisNo" asp-for="ChasisNo" type="text" placeholder="Enter car Chasis Number..." data-sb-validations="required" />
+                                    <label for="ChasisNo">ChasisNo</label>
+                                    <div class="invalid-feedback" data-sb-feedback="ChasisNo:required">Car chasis number is required.</div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Phone" asp-for="Phone" type="text" placeholder="Enter your Phone Number..." data-sb-validations="required" />
+                                    <label for="Phone">Phone</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Phone:required">Phone number is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="BVN" asp-for="BVN" type="text" placeholder="Enter your BVN..." data-sb-validations="required" />
+                                    <label for="BVN">BVN</label>
+                                    <div class="invalid-feedback" data-sb-feedback="BVN:required">BVN is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="POWs" asp-for="POWs" type="file" placeholder="Upload your car document..." data-sb-validations="required" />
+                                    <label for="POW">Proof Of Ownership</label>
+                                    <div class="invalid-feedback" data-sb-feedback="POWs:required">Proof Of Ownership is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="PlateNo" asp-for="PlateNo" type="text" placeholder="Enter your Plate Number..." data-sb-validations="required" />
+                                    <label for="PlateNo">Plate Number</label>
+                                    <div class="invalid-feedback" data-sb-feedback="PlateNo:required">Plate Number is required.</div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Receipts" asp-for="Receipts" type="file" placeholder="Upload Receipt of last product bought ..." data-sb-validations="required" />
+                                    <label for="Receipt">Receipt of Last Buy</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Receipts:required">Receipt is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" id="Litre" asp-for="Litre" type="number" placeholder="Enter last litre bought..." data-sb-validations="required" />
+                                    <label for="Litre">Last Litres bought</label>
+                                    <div class="invalid-feedback" data-sb-feedback="Litre:required">Last Litre bought is required.</div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <br />
+
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <br />
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <!-- Submit Button-->
+                        <button id="pushdetails" style="display:none" type="submit"></button>
+                        <button class="btn btn-primary btn-block text-uppercase " id="submitButton2" style="width: 100%; background-color: green; border-radius:20px">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+
+    $("#submitButton2").click(function () {
+        var model = $("#Model").val();
+        var year = $("#Year").val();
+        var engineno = $("#EngineNo").val();
+        var chasisno = $("#ChasisNo").val();
+        var phone = $("#Phone").val();
+        var bvn = $("#BVN").val();
+        var litre = $("#Litre").val();
+        var pow = $("#POWs").val();
+        var plateno = $("#PlateNo").val();
+        var receipt = $("#Receipts").val();
+
+        if (model == '' || model == null || model == "") {
+            toastr.error("model is required","Error");
+            return false;
+        }
+        if (year == '' || year == null || year == "") {
+            toastr.error("year is required", "Error");
+            return false;
+        }
+        if (engineno == '' || engineno == null || engineno == "") {
+            toastr.error("engine no is required", "Error");
+            return false;
+        }
+        if (chasisno == '' || chasisno == null || chasisno == "") {
+            toastr.error("chasisno is required", "Error");
+            return false;
+        }
+        if (phone == '' || phone == null || phone == "") {
+            toastr.error("phone is required", "Error");
+            return false;
+        }
+        if (bvn == '' || bvn == null || bvn == "") {
+            toastr.error("bvn is required", "Error");
+            return false;
+        }
+        
+        if (pow == '' || pow == null || pow == "") {
+            toastr.error("proof of ownership is required", "Error");
+            return false;
+        }
+        if (plateno == '' || plateno == null || plateno == "") {
+            toastr.error("plateno is required", "Error");
+            return false;
+        }
+        if (receipt == '' || receipt == null || receipt == "") {
+            toastr.error("receipt is required", "Error");
+            return false;
+        }
+
+        if (litre == '' || litre == null || litre == "") {
+            toastr.error("litre is required", "Error");
+            return false;
+        }
+
+        document.getElementById("pushdetails").click();
+        window.location.href = "Home/index";
+        toastr.success("You have successfully submitted your informatioin", "Successful");
+
+
+
+    });
+
+
+</script>
